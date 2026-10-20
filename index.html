@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouIA - Viraliza tu Creatividad con IA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <i class="fas fa-bars menu-icon"></i>
+            <div class="logo">
+                <div class="logo-container">
+                    <i class="fab fa-youtube"></i>
+                    <span class="logo-ia-text">IA</span>
+                </div>
+                <span class="logo-text">You<span class="ia-text">IA</span></span>
+            </div>
+        </div>
+        <div class="nav-center">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar creaciones de IA...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <i class="fas fa-microphone mic-icon"></i>
+        </div>
+        <div class="nav-right">
+            <i class="fas fa-video upload-icon" title="Subir Video IA"></i>
+            <i class="fas fa-bell notification-icon"></i>
+            <div class="user-profile"></div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <div class="sidebar-item active"><i class="fas fa-home"></i> <span>Inicio</span></div>
+            <div class="sidebar-item"><i class="fas fa-bolt"></i> <span>Shorts IA</span></div>
+            <div class="sidebar-item"><i class="fas fa-layer-group"></i> <span>Suscripciones</span></div>
+            <hr>
+            <div class="sidebar-item"><i class="fas fa-library"></i> <span>Biblioteca</span></div>
+            <div class="sidebar-item"><i class="fas fa-history"></i> <span>Historial</span></div>
+            <div class="sidebar-item"><i class="fas fa-clock"></i> <span>Ver más tarde</span></div>
+            <hr>
+            <div class="category-title">Nichos de IA</div>
+            <div class="sidebar-item"><i class="fas fa-robot"></i> <span>Sora / Runway</span></div>
+            <div class="sidebar-item"><i class="fas fa-music"></i> <span>Suno / Udio</span></div>
+            <div class="sidebar-item"><i class="fas fa-paint-brush"></i> <span>Midjourney Art</span></div>
+        </aside>
+
+        <!-- Feed de Videos -->
+        <main class="video-grid">
+            <!-- Los videos se cargarán dinámicamente con JS -->
+        </main>
+    </div>
+
+    <!-- Modal de Subida -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sube tu creación de IA</h2>
+            <p>Comparte tu video generado por IA con el mundo.</p>
+            <div class="upload-area">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Arrastra tu archivo aquí o haz clic para buscar</p>
+                <input type="file" id="videoFile" hidden>
+                <button onclick="document.getElementById('videoFile').click()">Seleccionar Archivo</button>
+            </div>
+            <input type="text" id="videoTitle" placeholder="Título del video">
+            <textarea id="videoDesc" placeholder="Descripción (menciona qué IA usaste)"></textarea>
+            <button id="btnPublish" class="publish-btn">Publicar en YouIA</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
